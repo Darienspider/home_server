@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
-
+import os 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'PhotoGallery',
     'Journal',
     'BillManagement',
+    'bootstrap5',
 ]
 
 MIDDLEWARE = [
@@ -59,7 +60,11 @@ ROOT_URLCONF = 'home_server.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'home_server', 'templates'),
+                 os.path.join(BASE_DIR, 'BillManagement', 'templates'),
+                 os.path.join(BASE_DIR, 'Journal', 'templates'),
+                 os.path.join(BASE_DIR, 'PhotoGallery', 'templates'),
+                 ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
