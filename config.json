@@ -1,0 +1,12 @@
+{
+    "platform":
+        {"Company":"Company Name",
+        "Product":"Product Name",
+        "Version":"1.0.0", 
+        "credentials": {
+                        "username":"admin",
+                        "password":"admin"
+                        }
+}
+
+}
