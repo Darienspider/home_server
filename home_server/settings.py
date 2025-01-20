@@ -27,6 +27,12 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+personal_apps = [
+    'PhotoGallery',
+    'Journal',
+    'BillManagement',
+    'bootstrap5',
+]
 
 # Application definition
 
@@ -39,11 +45,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # person apps
-    'PhotoGallery',
-    'Journal',
-    'BillManagement',
-    'bootstrap5',
+
 ]
+
+for app in personal_apps:
+    INSTALLED_APPS.append(app)
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -115,7 +122,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'EST'
 
 USE_I18N = True
 
@@ -128,6 +135,14 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    BASE_DIR / 'home_server/static',  # Adjust the path if necessary
+]
+
+
+for app in personal_apps:
+    if app != 'bootstrap5':
+        STATICFILES_DIRS.append(BASE_DIR / app / 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
