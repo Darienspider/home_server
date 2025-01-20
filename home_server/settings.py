@@ -67,7 +67,11 @@ ROOT_URLCONF = 'home_server.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'home_server', 'templates'),
+                 os.path.join(BASE_DIR, 'BillManagement', 'templates'),
+                 os.path.join(BASE_DIR, 'Journal', 'templates'),
+                 os.path.join(BASE_DIR, 'PhotoGallery', 'templates'),
+                 ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -83,7 +87,7 @@ TEMPLATES = [
 
 
 for apps in personal_apps:
-    TEMPLATES[0]['DIRS'].append(os.path.join(BASE_DIR, apps, 'templates'))
+    TEMPLATES[0]['DIRS'].append(os.path.join(BASE_DIR, str(apps), '/templates'))
 
 
 WSGI_APPLICATION = 'home_server.wsgi.application'
