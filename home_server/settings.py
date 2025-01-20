@@ -145,10 +145,11 @@ STATICFILES_DIRS = [
     BASE_DIR / 'home_server/static',  # Adjust the path if necessary
 ]
 
-
 for app in personal_apps:
     if app != 'bootstrap5':
         STATICFILES_DIRS.append(BASE_DIR / app / 'static')
+
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
