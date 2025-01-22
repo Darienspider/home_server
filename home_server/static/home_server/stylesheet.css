@@ -1,14 +1,31 @@
 h1 {
     color: green;
 }
-body {
-    background-color: black;
-}
 
-.project {
+
+.project_section {
     background-color: yellow;
     height: 50vh;
     width: 50%;
     margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
     border-radius: 5em;
+}
+
+.project{
+    background-color: lightblue;
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 5em;
+}
+#carouselExampleSlidesOnly{
+    background-color: green;
+    height: 80%;
+    border-radius: 2em;
 }

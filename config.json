@@ -1,12 +1,9 @@
 {
-    "platform":
-        {"Company":"Company Name",
-        "Product":"Product Name",
-        "Version":"1.0.0", 
-        "credentials": {
-                        "username":"admin",
-                        "password":"admin"
-                        }
-}
-
+    "platform": {
+        "name": "platformName",
+        "url": "platformUrl",
+        "username": "platformUsername",
+        "password": "platformPassword",
+        "token": "platformToken"
+    }
 }
