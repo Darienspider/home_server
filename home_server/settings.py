@@ -32,6 +32,7 @@ personal_apps = [
     'Journal',
     'BillManagement',
     'bootstrap5',
+    'Projects'
 ]
 
 # Application definition
@@ -43,9 +44,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-
-    # person apps
-
 ]
 
 for app in personal_apps:
@@ -67,11 +65,7 @@ ROOT_URLCONF = 'home_server.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'home_server', 'templates'),
-                 os.path.join(BASE_DIR, 'BillManagement', 'templates'),
-                 os.path.join(BASE_DIR, 'Journal', 'templates'),
-                 os.path.join(BASE_DIR, 'PhotoGallery', 'templates'),
-                 ],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
